@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '@/views/Login.vue'
+import Login from '../views/Login.vue'
 import { TOKEN } from "@/constant/Constant.js"
 
 Vue.use(VueRouter)
@@ -18,7 +18,20 @@ const routes = [
     {
         path: '/home',
         name: "Home",
-        component: () => import(/* webpackChunkName: "about" */ '@/views/Home.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue'),
+        redirect: '/welcome',
+        children: [
+            {
+                path: '/welcome',
+                name: 'welcome',
+                component: () => import('../views/other/Welcome.vue'),
+            },
+            {
+                path: '/users',
+                name: 'users',
+                component: () => import('../views/user/Users.vue'),
+            }
+        ]
     }
 
 ]

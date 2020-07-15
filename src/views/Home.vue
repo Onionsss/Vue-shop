@@ -119,7 +119,7 @@
         .aside_header{
             width: 100%;
             line-height: 24px;
-            background: #606266;
+            background: #545c64;
             text-align: center;
             font-size: 10px;
             color: white;

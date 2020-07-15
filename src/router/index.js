@@ -42,7 +42,6 @@ const router = new VueRouter({
 
 //路由守卫
 router.beforeEach((to, from, next) => {
-
     //如果是登录 放行
     if (to.path === "/login") return next();
     let token = sessionStorage.getItem(TOKEN)

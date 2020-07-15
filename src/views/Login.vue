@@ -62,7 +62,6 @@
               let data = val.data
               if(data.data){
                 //说明登录成功
-
                 //保存到sessionStorage
                 let token = data.data.token
                 sessionStorage.setItem(TOKEN,token)
